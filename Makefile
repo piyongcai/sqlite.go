@@ -108,11 +108,11 @@ linux_arm64:
 	go generate 2>&1 | tee log-generate
 	go build -v ./...
 
-# 3900x
+# linux1 Cloud VM
 linux_s390x:
-	@echo "Should be executed only on linux/amd64."
+	@echo "Should be executed only on linux/s390x."
 	go generate 2>&1 | tee log-generate
-	GOOS=linux GOARCH=s390x go build -v ./...
+	go build -v ./...
 
 # 3900x
 windows_amd64:
