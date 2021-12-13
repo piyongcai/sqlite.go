@@ -87,8 +87,8 @@ freebsd_amd64:
 # 3900x
 linux_amd64:
 	@echo "Should be executed only on linux/amd64."
-	TARGET_GOOS=linux TARGET_GOARCH=amd64 go generate 2>&1 | tee log-generate
-	GOOS=linux GOARCH=amd64 go build -v ./...
+	go generate 2>&1 | tee log-generate
+	go build -v ./...
 
 # 3900x
 linux_386:
