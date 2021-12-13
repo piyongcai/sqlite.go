@@ -92,9 +92,9 @@ linux_amd64:
 
 # 3900x
 linux_386:
-	@echo "Should be executed only on linux/amd64."
-	CCGO_CPP=i686-linux-gnu-cpp TARGET_GOARCH=386 TARGET_GOOS=linux go generate 2>&1 | tee log-generate
-	GOOS=linux GOARCH=386 go build -v ./...
+	@echo "Should be executed only on linux/386."
+	go generate 2>&1 | tee log-generate
+	go build -v ./...
 
 # 3900x
 linux_arm:
