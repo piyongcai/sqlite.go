@@ -90,17 +90,17 @@ linux_amd64:
 	go generate 2>&1 | tee log-generate
 	go build -v ./...
 
-# 3900x
+# nuc32
 linux_386:
 	@echo "Should be executed only on linux/386."
 	go generate 2>&1 | tee log-generate
 	go build -v ./...
 
-# 3900x
+# pi32
 linux_arm:
-	@echo "Should be executed only on linux/amd64."
+	@echo "Should be executed only on linux/arm."
 	go generate 2>&1 | tee log-generate
-	GOOS=linux GOARCH=arm go build -v ./...
+	go build -v ./...
 
 # 3900x
 linux_arm64:
