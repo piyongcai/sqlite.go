@@ -102,11 +102,11 @@ linux_arm:
 	go generate 2>&1 | tee log-generate
 	go build -v ./...
 
-# 3900x
+# pi64
 linux_arm64:
-	@echo "Should be executed only on linux/amd64."
+	@echo "Should be executed only on linux/arm64."
 	go generate 2>&1 | tee log-generate
-	GOOS=linux GOARCH=arm64 go build -v ./...
+	go build -v ./...
 
 # 3900x
 linux_s390x:
